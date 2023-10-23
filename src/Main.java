@@ -15,9 +15,7 @@ public class Main {
             // Definitions of arrays A, B, and C
             int[][] arrayA = {{1, 2}, {3, 4}};
             int[][] arrayB = {{6, 6}, {8, 8}};
-            int[][] arrayC = {{1, 2}, {2, 1}};
-
-
+            int[][] arrayC = {{1, 2}, {2,1}} ;
 
             String expression = "2*A-3*((B-2*C)/(A+3)-B*3)";
             // Create an evaluator for integer operators
