@@ -45,6 +45,9 @@ public class Main {
                 // Initialize the result array with zeros
                 int[][] result = new int[arrayA.length][arrayA[0].length];
 
+                // TODO: Other logic here....
+
+
                 // Perform element-wise multiplication
                 result = performOperation(result, arrayA, arrayB, "*", 2);
 
