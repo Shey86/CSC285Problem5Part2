@@ -64,8 +64,9 @@ class GenericManagerStacks<T> {
     }// This is the end of peeknode
 
     // This method returns true if the stack is empty
-    boolean stackempty() {
+    boolean stackEmpty() {
         if (number == 0) return true;
         else return false;
     }
+
 }// End of GenericManager class

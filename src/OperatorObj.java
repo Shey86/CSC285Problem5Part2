@@ -19,12 +19,12 @@ class OpertorObj {
     } // This is the end of the constructor
 
     // Method to get the priority
-    public int Getprior() {
+    public int getPriority() {
         return priority;
     }
 
     // Method to get the operator
-    public char Getopert() {
+    public char getOperator() {
         return operator;
     }
     // Method to print result to readable format
