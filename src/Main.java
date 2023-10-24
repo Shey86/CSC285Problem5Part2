@@ -25,7 +25,75 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        public class Main {
+            public static void main(String[] args) {
+                // Definitions of arrays A, B, and C
+                int[][] arrayA = {{1, 2}, {3, 4}};
+                int[][] arrayB = {{6, 6}, {8, 8}};
+                int[][] arrayC = {{1, 2}, {2, 1}};
 
+                String expression = "2*A-3*((B-2*C)/(A+3)-B*3)";
+
+                // Evaluate the expression
+                int[][] result = evaluateExpression(expression, arrayA, arrayB, arrayC);
+
+                // Print the final result
+                printArray(result);
+            }
+
+            public static int[][] evaluateExpression(String expression, int[][] arrayA, int[][] arrayB, int[][] arrayC) {
+                // Initialize the result array with zeros
+                int[][] result = new int[arrayA.length][arrayA[0].length];
+
+                // Your expression evaluation logic here...
+
+                // Perform element-wise multiplication
+                result = performOperation(result, arrayA, arrayB, "*", 2);
+
+                // Print intermediate result
+                System.out.println("Intermediate result after element-wise multiplication:");
+                printArray(result);
+
+                // Perform element-wise subtraction
+                result = performOperation(result, arrayA, arrayC, "-", 3);
+
+                // Print intermediate result
+                System.out.println("Intermediate result after element-wise subtraction:");
+                printArray(result);
+
+                // Perform element-wise division
+                result = performOperation(result, arrayB, arrayC, "/", 5);
+
+                // Print intermediate result
+                System.out.println("Intermediate result after element-wise division:");
+                printArray(result);
+
+                // Perform element-wise subtraction
+                result = performOperation(result, arrayA, arrayB, "-", 7);
+
+                // Print intermediate result
+                System.out.println("Intermediate result after element-wise subtraction:");
+                printArray(result);
+
+                return result;
+            }
+
+            public static int[][] performOperation(int[][] result, int[][] arrayA, int[][] arrayB, String operator, int constant) {
+                // Perform the specified operation and apply the constant if needed
+                // Update the result array accordingly
+
+                return result;
+            }
+
+            public static void printArray(int[][] arr) {
+                for (int i = 0; i < arr.length; i++) {
+                    for (int j = 0; j < arr[0].length; j++) {
+                        System.out.print(arr[i][j] + " ");
+                    }
+                    System.out.println();
+                }
+            }
+        }
 
         //*************************************Creating the Operator Table ******************************************
         // Create the symbols for the operators table
@@ -186,7 +254,7 @@ public class Main {
 
 
     public static void evaluateExpression(String expression, PrintWriter output, int[][] arrayA, int[][] arrayB, int[][] arrayC) {
-        // Your previous expression evaluation logic here...
+
 
         // Perform element-wise multiplication
         performArrayOperation(arrayA, arrayB, arrayC, "*", 2.0);
